@@ -1,24 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_playground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-he-jPm">
+                                <rect key="frame" x="146.66666666666666" y="97" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="O2E-pZ-1JC"/>
+                                    <constraint firstAttribute="width" constant="100" id="u8E-9w-xUF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Eb-Lm-K7T">
+                                <rect key="frame" x="146.66666666666666" y="224" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JpV-4f-dM0"/>
+                                    <constraint firstAttribute="height" constant="100" id="fJl-Z0-no9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySV-Ge-k6g">
+                                <rect key="frame" x="138" y="455" width="117" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="사진 추가하기"/>
+                                <connections>
+                                    <action selector="selectImagesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wuO-Dx-nuV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xoj-he-jPm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="713-d0-CG3"/>
+                            <constraint firstItem="7Eb-Lm-K7T" firstAttribute="top" secondItem="xoj-he-jPm" secondAttribute="bottom" constant="27" id="W7c-1k-cBg"/>
+                            <constraint firstItem="ySV-Ge-k6g" firstAttribute="top" secondItem="7Eb-Lm-K7T" secondAttribute="bottom" constant="131" id="ZnF-ez-5sA"/>
+                            <constraint firstItem="ySV-Ge-k6g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aOS-a7-1C0"/>
+                            <constraint firstItem="7Eb-Lm-K7T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jua-mj-J5K"/>
+                            <constraint firstItem="xoj-he-jPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="qEx-3K-t27"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView1" destination="xoj-he-jPm" id="y1U-04-VzY"/>
+                        <outlet property="imageView2" destination="7Eb-Lm-K7T" id="rxy-Sv-4l8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-28.244274809160306" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
